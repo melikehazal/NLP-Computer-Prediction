@@ -11,7 +11,8 @@ nltk.download('punkt_tab')
 app = Flask(__name__)
 CORS(app)
 
-df = pd.read_csv("C://Users/Emrehan/Desktop/Emrehan Simsek/veri çekme selenium/training/all_laptop_reviews.csv")
+df = pd.read_csv(r"C:\Users\Dell\Desktop\NLP\Datasets\Laptop_Reviews.csv")
+
 df_unique = df.drop_duplicates(subset=['Product Name']).reset_index(drop=True)
 def preprocess_text(text):
     text = text.lower()
